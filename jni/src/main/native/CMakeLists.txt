@@ -23,7 +23,7 @@ include_directories(./ops)
 include_directories(${JNI_INCLUDE_DIRS})
 
 # Find Native TensorFlow Library to link
-find_library(LIB_TENSORFLOW tensorflow HINTS ENV LD_LIBRARY_PATH)
+find_library(LIB_TENSORFLOW tensorflow_jni HINTS ENV LD_LIBRARY_PATH)
 if(NOT LIB_TENSORFLOW)
   message(FATAL_ERROR "Library `tensorflow` not found.")
 endif()
